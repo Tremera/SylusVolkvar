@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" data-mode="pup">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sylus Volkvar</title>
+  <meta name="description" content="Lore for Sylus Volkvar: your best friend's little brother, a golden retriever raised by the Bratva, in rainy Seattle.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Caveat:wght@500;700&family=Permanent+Marker&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="rain" aria-hidden="true"></div>
+  <div class="watermark" aria-hidden="true">ВОЛК</div>
+
+  <header class="topbar">
+    <a class="wordmark" href="#top">Sylus Volkvar</a>
+    <button class="toggle" id="toggle" type="button" aria-pressed="false">
+      <svg class="toggle-icon" viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="21" rx="7" ry="6"/><ellipse cx="7" cy="13" rx="3" ry="4"/><ellipse cx="13" cy="7.5" rx="3" ry="4"/><ellipse cx="19" cy="7.5" rx="3" ry="4"/><ellipse cx="25" cy="13" rx="3" ry="4"/></svg>
+      <span class="v-pup">Threaten his people</span>
+      <span class="v-wolf">Call him off, shchenok</span>
+    </button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <figure class="portrait">
+        <img class="v-pup-img" src="images/sylus.jpg" alt="Sylus: very tall, shaggy platinum-blond hair, black tank top, both arms sleeved in dark Russian tattoos, a silver chain around his neck." width="349" height="507">
+        <img class="v-wolf-img" src="images/sylus-wolf.jpg" alt="Sylus looking back over his tattooed shoulder, a double-headed eagle inked across it, grey eyes cold." width="351" height="439">
+      </figure>
+      <div class="hero-text">
+        <p class="kicker">
+          <span class="v-pup">Ara's little brother</span>
+          <span class="v-wolf">Nikolus Volkvar's nephew</span>
+        </p>
+        <h1>
+          <span class="v-pup">Sylus Volkvar</span>
+          <span class="v-wolf">The puppy bites.</span>
+        </h1>
+        <p class="lede">
+          <span class="v-pup">All seven feet of him. Business major (allegedly), first one on the dance floor, best friends with every dog he's ever met.</span>
+          <span class="v-wolf">Raised in a Bratva house outside Moscow by a man they call the Wolf. He's still smiling. That's the bad part.</span>
+        </p>
+        <div class="bio">
+          <p class="v-pup">He lifts people off the floor when he hugs them. He calls everyone by a nickname. He has never once checked a price tag, and his sister Ara says he has no ambition, which he cheerfully agrees with.</p>
+          <p class="v-wolf">Someone cornered you at a bar tonight. You called Ara. Ara was asleep. He got there in eight minutes, kissed the top of your head, and said the man's name out loud, and who he works for.</p>
+          <p>You've met him twice. He flirted the whole time. Ara pointed a fork at him and told him you were off limits.</p>
+        </div>
+        <ul class="facts">
+          <li><span>Age</span>21</li>
+          <li><span>Height</span>About 7'0"</li>
+          <li><span>Drives</span>'69 Charger</li>
+          <li class="v-pup-li"><span>Weakness</span>Dogs. All of them.</li>
+          <li class="v-wolf-li"><span>Response time</span>8 minutes</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="fridge-section" aria-labelledby="fridge-title">
+      <div class="fridge">
+        <div class="magnet" aria-hidden="true"></div>
+        <h2 id="fridge-title">House rules <small>(for Sylus)</small></h2>
+        <p class="fridge-hint">Ara's list, stuck to the fridge with a cat magnet. His replies are in marker. Tap a rule when he breaks it.</p>
+        <ol class="rules" id="rules"></ol>
+        <p class="signoff">— A. <span>(I mean it, durak)</span></p>
+      </div>
+    </section>
+
+    <section class="lore" aria-labelledby="lore-title">
+      <h2 id="lore-title">
+        <span class="v-pup">What he'll happily tell you</span>
+        <span class="v-wolf">What he won't</span>
+      </h2>
+      <p class="lore-intro">
+        <span class="v-pup">Some of this is blacked out. He's a terrible liar, so mostly he just changes the subject. Loudly.</span>
+        <span class="v-wolf">All of it. The stairs, the ransom, the man at the bar. Don't tell Ara he told you.</span>
+      </p>
+
+      <div class="controls">
+        <div class="filters" role="group" aria-label="Filter lore">
+          <button type="button" class="filter is-active" data-group="all" aria-pressed="true">All</button>
+          <button type="button" class="filter" data-group="places" aria-pressed="false">Places</button>
+          <button type="button" class="filter" data-group="past" aria-pressed="false">The family</button>
+          <button type="button" class="filter" data-group="habits" aria-pressed="false">His things</button>
+          <button type="button" class="filter" data-group="people" aria-pressed="false">People</button>
+        </div>
+        <label class="search">
+          <span class="sr-only">Search the lore</span>
+          <input type="search" id="search" placeholder="Search the lore" autocomplete="off">
+        </label>
+      </div>
+
+      <div class="entries" id="entries"></div>
+      <p class="empty" id="empty" hidden>Nothing in the lore matches that. Try a name, like Ara or Borscht.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <!-- Replace the # links with your bot links. -->
+    <div class="chat-links">
+      <a class="chat" href="#">Chat with him on Janitor AI</a>
+      <a class="chat" href="#">Chat with him on Tipsy</a>
+    </div>
+    <p class="small">Sylus Volkvar is an original character, not the Love and Deepspace Sylus. All characters are adults.</p>
+  </footer>
+
+  <script src="lore.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
